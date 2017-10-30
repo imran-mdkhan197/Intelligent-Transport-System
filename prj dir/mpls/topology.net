@@ -1,0 +1,140 @@
+autostart = False
+version = 0.8.3.1
+[127.0.0.1:7200]
+    workingdir = D:\wrk dir
+    udp = 10000
+    [[3660]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\c3660-jk9o3s-mz.124-12.image
+        idlepc = 0x6055fbb8
+        sparsemem = True
+        ghostios = True
+        chassis = 3660
+    [[ROUTER R4]]
+        model = 3660
+        console = 2004
+        aux = 2504
+        cnfg = configs\R4.cfg
+        slot1 = NM-4T
+        s1/0 = R3 s1/1
+        s1/1 = R1 s1/1
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = -209.0
+        y = 138.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3660
+        console = 2001
+        aux = 2501
+        cnfg = configs\R1.cfg
+        f0/0 = R5 f0/0
+        f0/1 = R7 f0/1
+        slot1 = NM-4T
+        s1/0 = R2 s1/0
+        s1/1 = R4 s1/1
+        x = -438.0
+        y = -36.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3660
+        console = 2002
+        aux = 2502
+        cnfg = configs\R2.cfg
+        slot1 = NM-4T
+        s1/0 = R1 s1/0
+        s1/1 = R3 s1/0
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = -215.0
+        y = -245.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3660
+        console = 2003
+        aux = 2503
+        cnfg = configs\R3.cfg
+        f0/0 = R6 f0/0
+        f0/1 = R8 f0/1
+        slot1 = NM-4T
+        s1/0 = R2 s1/1
+        s1/1 = R4 s1/0
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = -8.0
+        y = -41.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = D:\wrk dir
+    udp = 10100
+    [[3660]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\c3660-jk9o3s-mz.124-12.image
+        idlepc = 0x6055fbb8
+        sparsemem = True
+        ghostios = True
+        chassis = 3660
+    [[ROUTER R5]]
+        model = 3660
+        console = 2006
+        aux = 2506
+        cnfg = configs\R5.cfg
+        f0/0 = R1 f0/0
+        slot1 = NM-4T
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = -574.0
+        y = 260.0
+        z = 1.0
+    [[ROUTER R6]]
+        model = 3660
+        console = 2007
+        aux = 2507
+        cnfg = configs\R6.cfg
+        f0/0 = R3 f0/0
+        slot1 = NM-4T
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = 333.0
+        y = 226.0
+        z = 1.0
+    [[ROUTER R7]]
+        model = 3660
+        console = 2008
+        aux = 2508
+        cnfg = configs\R7.cfg
+        f0/1 = R1 f0/1
+        slot1 = NM-4T
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = -285.0
+        y = 273.0
+        z = 1.0
+    [[ROUTER R8]]
+        model = 3660
+        console = 2009
+        aux = 2509
+        cnfg = configs\R8.cfg
+        f0/1 = R3 f0/1
+        slot1 = NM-4T
+        slot2 = NM-4T
+        slot3 = NM-1FE-TX
+        x = 420.0
+        y = 12.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[NOTE 1]]
+        text = "A-1"
+        x = -553.0
+        y = 323.0
+    [[NOTE 2]]
+        text = "B-2"
+        x = 445.0
+        y = 63.0
+    [[NOTE 3]]
+        text = "B-1"
+        x = -249.0
+        y = 320.0
+    [[NOTE 4]]
+        text = "A-2"
+        x = 336.0
+        y = 269.0

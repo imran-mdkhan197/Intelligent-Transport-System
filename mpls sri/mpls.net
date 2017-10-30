@@ -1,0 +1,152 @@
+autostart = False
+version = 0.8.3.1
+[127.0.0.1:7202]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10200
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R5]]
+        console = 2005
+        aux = 2505
+        cnfg = R5.cfg
+        slot0 = C7200-IO-2FE
+        f0/1 = R4 f0/1
+        slot1 = PA-4T+
+        s1/2 = R2 s1/2
+        slot2 = PA-4T+
+        x = -456.0
+        y = -225.0
+        z = 1.0
+    [[ROUTER R6]]
+        console = 2006
+        aux = 2506
+        cnfg = R6.cfg
+        slot0 = C7200-IO-2FE
+        f0/1 = R1 f0/1
+        slot1 = PA-4T+
+        s1/2 = R9 s1/2
+        slot2 = PA-4T+
+        x = 304.0
+        y = -203.0
+        z = 1.0
+[127.0.0.1:7200]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10000
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2001
+        aux = 2501
+        cnfg = R1.cfg
+        slot0 = C7200-IO-2FE
+        f0/0 = R4 f0/0
+        f0/1 = R6 f0/1
+        slot1 = PA-4T+
+        slot2 = PA-4T+
+        x = 21.0
+        y = -221.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2002
+        aux = 2502
+        cnfg = R2.cfg
+        slot0 = C7200-IO-2FE
+        slot1 = PA-4T+
+        s1/2 = R5 s1/2
+        slot2 = PA-4T+
+        x = -459.0
+        y = 106.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10100
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R4]]
+        console = 2004
+        aux = 2504
+        cnfg = R4.cfg
+        slot0 = C7200-IO-2FE
+        f0/0 = R1 f0/0
+        f0/1 = R5 f0/1
+        slot1 = PA-4T+
+        slot2 = PA-4T+
+        x = -216.0
+        y = -217.0
+        z = 1.0
+[127.0.0.1:7204]
+    workingdir = C:\Users\hp\AppData\Local\Temp
+    udp = 10400
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R9]]
+        console = 2009
+        aux = 2509
+        cnfg = R9.cfg
+        slot0 = C7200-IO-2FE
+        slot1 = PA-4T+
+        s1/2 = R6 s1/2
+        slot2 = PA-4T+
+        x = 325.0
+        y = 101.0
+        z = 1.0
+[GNS3-DATA]
+    configs = C:\Program Files\GNS3
+    [[NOTE 1]]
+        text = "s1/2"
+        x = 27.6575588735
+        y = -17.6416236147
+        interface = R9 s1/2
+    [[NOTE 2]]
+        text = "s1/2"
+        x = 30.9572839762
+        y = -17.9478073397
+        interface = R2 s1/2
+    [[NOTE 3]]
+        text = "f0/1"
+        x = 72.9193346786
+        y = 24.5390389548
+        interface = R1 f0/1
+    [[NOTE 4]]
+        text = "f0/0"
+        x = -6.99430412414
+        y = 22.6750093523
+        interface = R1 f0/0
+    [[NOTE 5]]
+        text = "s1/2"
+        x = 38.3424411265
+        y = 61.6416236147
+        interface = R6 s1/2
+    [[NOTE 6]]
+        text = "f0/1"
+        x = -6.91933467865
+        y = 19.4609610452
+        interface = R6 f0/1
+    [[NOTE 7]]
+        text = "s1/2"
+        x = 35.0427160238
+        y = 61.9478073397
+        interface = R5 s1/2
+    [[NOTE 8]]
+        text = "f0/1"
+        x = 72.9777962792
+        y = 23.3325932093
+        interface = R5 f0/1
+    [[NOTE 9]]
+        text = "f0/1"
+        x = 0.0222037208338
+        y = 15.6674067907
+        interface = R4 f0/1
+    [[NOTE 10]]
+        text = "f0/0"
+        x = 72.9943041241
+        y = 21.3249906477
+        interface = R4 f0/0

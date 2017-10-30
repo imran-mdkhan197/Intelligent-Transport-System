@@ -1,0 +1,67 @@
+autostart = False
+version = 0.8.3.1
+[127.0.0.1:7200]
+    workingdir = D:\wrk dir
+    udp = 10000
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R1]]
+        console = 2001
+        aux = 2501
+        slot0 = C7200-IO-2FE
+        slot1 = PA-8T
+        s1/0 = R2 s1/0
+        slot2 = PA-2FE-TX
+        x = -524.0
+        y = -98.0
+        z = 1.0
+    [[ROUTER R2]]
+        console = 2002
+        aux = 2502
+        slot0 = C7200-IO-2FE
+        slot1 = PA-8T
+        s1/0 = R1 s1/0
+        s1/1 = R3 s1/0
+        x = -192.0
+        y = -91.0
+        z = 1.0
+[127.0.0.1:7201]
+    workingdir = D:\wrk dir
+    udp = 10100
+    [[7200]]
+        image = C:\Users\hp\Desktop\gns\GNS-IOS Images\C7200.bin
+        sparsemem = True
+        ghostios = True
+    [[ROUTER R3]]
+        console = 2003
+        aux = 2503
+        slot0 = C7200-IO-2FE
+        slot1 = PA-8T
+        s1/0 = R2 s1/1
+        slot2 = PA-2FE-TX
+        x = 194.0
+        y = -98.0
+        z = 1.0
+[GNS3-DATA]
+    [[NOTE 1]]
+        text = "s1/0"
+        x = -29.9015604863
+        y = 23.8045446619
+        interface = R3 s1/0
+    [[NOTE 2]]
+        text = "s1/1"
+        x = 72.9015604863
+        y = 19.1954553381
+        interface = R2 s1/1
+    [[NOTE 3]]
+        text = "s1/0"
+        x = -33.9697520246
+        y = 21.5552887479
+        interface = R2 s1/0
+    [[NOTE 4]]
+        text = "s1/0"
+        x = 72.9697520246
+        y = 20.4447112521
+        interface = R1 s1/0

@@ -1,0 +1,8 @@
+autostart = False
+version = 0.8.3.1
+[GNS3-DATA]
+    configs = configs
+    [[Cloud C1]]
+        x = -418.5
+        y = -247.0
+        z = 1.0
